@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="allimages/logoo.png" type="image/x-icon" >
 </head>
 <body>
@@ -388,8 +390,27 @@ technology and power.
         <a href="#" class="social-icon"><i class="fa fa-linkedin-square"></i></a>
       </div>
     </div>
+    <button id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
   </footer>
+  <script>
+window.onscroll = function() {
+  showBackToTopButton();
+};
 
+function showBackToTopButton() {
+  const button = document.getElementById("backToTop");
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    button.style.display = "block"; 
+  } else {
+    button.style.display = "none"; 
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' }); 
+}
+
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
